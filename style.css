@@ -1,3 +1,43 @@
+/* === Grille de compétences === */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin: 32px 0 48px 0;
+}
+.skill-card {
+  background: linear-gradient(120deg, #e0f7fa 0%, #fff 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.13);
+  padding: 32px 24px 24px 24px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  animation: floatUp 1.2s ease forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(100,255,218,0.18);
+}
+.skill-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 2px 8px #64ffda44);
+}
+.skill-card h3 {
+  color: #0a192f;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+.skill-card p {
+  color: #222;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
 /* === Styles globaux === */
 
 body {
